@@ -1,0 +1,9 @@
+input{
+	border: none;
+	border-bottom: 2px solid green;
+}
+h3{
+	text-align: center;
+	color: black;
+	font-family: 'Ubuntu Condensed', sans-serif;
+}

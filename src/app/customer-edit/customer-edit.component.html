@@ -1,0 +1,33 @@
+ <div class="container-fluid">
+ 
+ <h3>Edit Customer Details</h3>
+   
+ <div class="row">
+   <div class="col-sm-3">
+   
+   </div>
+   <div class="col-sm-6">
+     <form>
+      <div class="form-group" id="myDiv">
+       <label for="usr">Customer ID:</label>
+       <input type="number" [(ngModel)]="id" value={{id}} class="form-control" [ngModelOptions]="{standalone: true}" placeholder="Enter customer id">
+      </div>
+      <div class="form-group">
+       <label for="first">First name:</label>
+       <input [(ngModel)]="first" value={{first}} type="text" class="form-control" id="first" [ngModelOptions]="{standalone: true}" placeholder="Enter customer first name">
+      </div>
+      <div class="form-group">
+       <label for="first">Last name:</label>
+       <input [(ngModel)]="last" value={{last}} type="text" class="form-control" id="first" [ngModelOptions]="{standalone: true}" placeholder="Enter customer last name">
+      </div>
+      
+      <button type="button" class="btn btn-success" (click)="commit()">Commit Edit <span class="glyphicon glyphicon-ok"></span></button>
+     </form>
+   </div>
+   <br><br>
+   <div class="col-sm-3">
+  
+   </div>
+ </div>
+ 
+ </div>
