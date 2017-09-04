@@ -16,7 +16,7 @@ editCustomer(id: string, first: string, last: string) {
             headers: headers 
           })
       .toPromise()
-      .then(res => res.json().data )
+      .then(res => res.json())
       .catch(err => alert('error'));
   }
   

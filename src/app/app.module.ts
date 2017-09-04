@@ -7,11 +7,15 @@ import { CustomerDeleteService } from './customer-delete.service';
 import { CustomerEditComponent } from './customer-edit/customer-edit.component'; 
 import { CustomerUpdateService } from './customer-update.service';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomerEditComponent
+    CustomerEditComponent,
+    HomeComponent,
+    LoginComponent   
   ],
   imports: [
     BrowserModule,

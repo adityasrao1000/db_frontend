@@ -1,6 +1,6 @@
 import { Component,  Input} from '@angular/core';
 import { CustomerUpdateService } from '../customer-update.service';
-import { AppComponent } from '../app.component';
+import { HomeComponent } from '../home.component';
 @Component({
   selector: 'app-customer-edit',
   templateUrl: './customer-edit.component.html',
@@ -14,7 +14,7 @@ export class CustomerEditComponent {
   @Input() first: string = '';
   @Input() last: string = '';
   ok: boolean;
-  constructor(private custupdate: CustomerUpdateService, private appcomp: AppComponent) {}
+  constructor(private custupdate: CustomerUpdateService, private homecomp: HomeComponent) {}
   
   commit() {
     if (this.first.includes('"') || this.last.includes('"')) {
@@ -24,7 +24,7 @@ export class CustomerEditComponent {
     this.ok = confirm('Do you want to commit changes?');
     if (this.ok) {
     this.custupdate.editCustomer(this.id, this.first, this.last)
-      .then(show => {this.appcomp.getCustomerDetails()});
+      .then(show => {this.homecomp.getCustomerDetails()});
     }
   }
  
