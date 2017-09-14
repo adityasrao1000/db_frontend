@@ -1,4 +1,16 @@
-
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" routerLink="/home">Customer <i>DB</i><span style="color:red" class="glyphicon glyphicon-cog"></span></a>
+    </div>
+    
+  </div>
+</nav>
 <div class="container-fluid">
 <div class="row">
  <div class="col-sm-3">
@@ -7,6 +19,7 @@
  <div class="col-sm-6">
  <br>
  <h3>Login:</h3>
+ <p style="text-align:center; color:red">{{message}}</p>
   <form (ngSubmit)="onSubmit()" novalidate>
   <div class="form-group">
     <label for="email">Email address:</label>

@@ -5,6 +5,8 @@ import { CustomerDeleteService } from './customer-delete.service';
 import { CustomerEditComponent } from './customer-edit/customer-edit.component'; 
 import 'rxjs/Rx';
 import { User } from './user';
+import { ActivateGuard } from './login/activate-guard.service';
+import { Router } from '@angular/router';
 
 @Component({
   templateUrl: './home.component.html',
@@ -19,7 +21,12 @@ export class HomeComponent implements OnInit {
   first: string = '';
   last: string = '';
   // Inject HttpClient into your component or service.
-  constructor(private http: Http , private cust: CustomerDetailsService, private customerDelete: CustomerDeleteService) {}
+  constructor(private http: Http ,
+     private cust: CustomerDetailsService,
+     private customerDelete: CustomerDeleteService,
+     private activateguard: ActivateGuard,
+     private router: Router
+   ) {}
  
  getCustomerDetails() {
    this.cust.search()
@@ -49,6 +56,9 @@ export class HomeComponent implements OnInit {
      elmnt.scrollIntoView();
   }
   ngOnInit(): void {
+    if (!this.activateguard.canActivate()) {
+      this.router.navigate(['/login']);
+    }
    // Get the customer details
    this.getCustomerDetails()
   }

@@ -1,0 +1,22 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" routerLink="/home">Customer <i>DB</i><span style="color:red" class="glyphicon glyphicon-cog"></span></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a routerLink="/home">Customer Details <span style="color:red" class="glyphicon glyphicon-list-alt"></span></a></li>
+        <li ><a >Add Customer <span style="color:red" class="glyphicon glyphicon-plus-sign"></span></a></li>          
+      </ul>
+        
+      <ul class="nav navbar-nav navbar-right">
+        <li><a style="cursor: pointer" (click)="logout()"><span style="color: red" class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,6 +1,7 @@
 import { Component} from '@angular/core';
 import { User } from './user';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,5 +10,7 @@ import { User } from './user';
   
 export class AppComponent {
  show: boolean = false;
+ constructor() { }
  
+   
 }

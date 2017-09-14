@@ -11,13 +11,18 @@ import { HomeComponent } from './home.component';
 import { LoginComponent } from './login/login.component';
 import { LoginValidateService } from './login/login-validate.service';
 import { routing, appRoutingProviders } from './app.routes';
+import { ActivateGuard } from './login/activate-guard.service';
+import { SessionCheckService } from './login/session-check.service';
+import { NavbarComponent } from './navbar/navbar.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomerEditComponent,
     HomeComponent,
-    LoginComponent     
+    LoginComponent,
+    NavbarComponent     
   ],
   imports: [
     BrowserModule,
@@ -30,7 +35,9 @@ import { routing, appRoutingProviders } from './app.routes';
     CustomerDetailsService,
     CustomerDeleteService,
     CustomerUpdateService,
-    LoginValidateService
+    LoginValidateService,
+    SessionCheckService,
+    ActivateGuard
    
   ],
   bootstrap: [AppComponent]
