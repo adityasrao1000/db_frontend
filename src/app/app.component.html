@@ -12,11 +12,13 @@
       <ul class="nav navbar-nav">
         <li class="active"><a >Customer Details <span style="color:red" class="glyphicon glyphicon-list-alt"></span></a></li>
         <li ><a >Add Customer <span style="color:red" class="glyphicon glyphicon-plus-sign"></span></a></li>
-        
-      
+          
       </ul>
-     
+      
+      <ul class="nav navbar-nav navbar-right" *ngIf="show ===true">
+        <li><a href="login"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+      </ul>
     </div>
   </div>
 </nav>
-<app-home></app-home>
+<router-outlet></router-outlet>

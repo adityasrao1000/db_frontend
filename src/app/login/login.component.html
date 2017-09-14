@@ -1,3 +1,28 @@
-<p>
-  login works!
-</p>
+
+<div class="container-fluid">
+<div class="row">
+ <div class="col-sm-3">
+ 
+ </div>
+ <div class="col-sm-6">
+ <br>
+ <h3>Login:</h3>
+  <form (ngSubmit)="onSubmit()" novalidate>
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" id="email">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" id="pwd">
+  </div>
+  
+  <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+ </div>
+ <div class="col-sm-3">
+ 
+ </div>
+</div>
+</div>
+

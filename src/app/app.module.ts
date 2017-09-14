@@ -9,24 +9,28 @@ import { CustomerUpdateService } from './customer-update.service';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home.component';
 import { LoginComponent } from './login/login.component';
+import { LoginValidateService } from './login/login-validate.service';
+import { routing, appRoutingProviders } from './app.routes';
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomerEditComponent,
     HomeComponent,
-    LoginComponent   
+    LoginComponent     
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    FormsModule
+    FormsModule,
+    routing
 
   ],
   providers: [
     CustomerDetailsService,
     CustomerDeleteService,
-    CustomerUpdateService
+    CustomerUpdateService,
+    LoginValidateService
    
   ],
   bootstrap: [AppComponent]

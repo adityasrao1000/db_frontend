@@ -8,6 +8,6 @@ import { User } from './user';
 })
   
 export class AppComponent {
- 
+ show: boolean = false;
  
 }

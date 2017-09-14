@@ -13,11 +13,11 @@
 <table>
 <tr><th>Customer Id</th><th>First Name</th><th>Last Name</th><th>Delete Customer</th><th>Edit Details</th><tr>
 <tr *ngFor="let r of results">
-<td>{{r.id}}</td><td>{{r.first}}</td><td>{{r.last}}</td>
-<td>
+<td data-label="User Id">{{r.id}}</td><td data-label="First Name">{{r.first}}</td><td data-label="Last Name">{{r.last}}</td>
+<td data-label="Delete record">
 <button type="button" (click)="deleteUser(r.id)" class="btn btn-danger btn-sm">Remove <span class="glyphicon glyphicon-remove"></span></button>
  </td>
-<td><button type="button" (click)="editUser(r.id,r.first,r.last)"class="btn btn-warning btn-sm">Edit <span class="glyphicon glyphicon-edit"></span></button></td>
+<td data-label="Edit record"><button type="button" (click)="editUser(r.id,r.first,r.last)"class="btn btn-warning btn-sm">Edit <span class="glyphicon glyphicon-edit"></span></button></td>
 </tr>
 </table>
 </div>

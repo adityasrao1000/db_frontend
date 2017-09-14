@@ -7,7 +7,6 @@ import 'rxjs/Rx';
 import { User } from './user';
 
 @Component({
-  selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
@@ -46,7 +45,8 @@ export class HomeComponent implements OnInit {
     this.id = id1;
     this.first = first1;
     this.last = last1;
-    location.href = '#myDiv';
+     const elmnt = document.getElementById('myDiv');
+     elmnt.scrollIntoView();
   }
   ngOnInit(): void {
    // Get the customer details
