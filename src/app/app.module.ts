@@ -10,11 +10,12 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home.component';
 import { LoginComponent } from './login/login.component';
 import { LoginValidateService } from './login/login-validate.service';
-import { routing, appRoutingProviders } from './app.routes';
+import { AppRoutingModule } from './app-routes.module';
 import { ActivateGuard } from './login/activate-guard.service';
 import { SessionCheckService } from './login/session-check.service';
-import { NavbarComponent } from './navbar/navbar.component';
-
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { CustomerInfoModule } from './customer-info/customer-info.module';
+import { SharedModule } from './shared.module';
 
 @NgModule({
   declarations: [
@@ -22,13 +23,15 @@ import { NavbarComponent } from './navbar/navbar.component';
     CustomerEditComponent,
     HomeComponent,
     LoginComponent,
-    NavbarComponent     
+    PagenotfoundComponent     
   ],
   imports: [
     BrowserModule,
+    SharedModule,
+    CustomerInfoModule,
+    AppRoutingModule,
     HttpModule,
-    FormsModule,
-    routing
+    FormsModule
 
   ],
   providers: [
@@ -40,6 +43,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     ActivateGuard
    
   ],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
