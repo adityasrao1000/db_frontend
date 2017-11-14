@@ -1,17 +1,17 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" (click)="slidebar()" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" routerLink="/home">Customer <i>DB</i><span style="color:red" class="glyphicon glyphicon-cog"></span></a>
+      <a class="navbar-brand" routerLink="/home">Customer <i>DB</i><span style="color:red; margin-left:5px"><i class="fa fa-database" aria-hidden="true"></i></span></a>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
+    <div class="collapse navbar-collapse" id="myNavbar" [style.display]="value">
       <ul class="nav navbar-nav">
-        <li ><a routerLink="/home" routerLinkActive="active-link">Customer Details <span style="color:red" class="glyphicon glyphicon-list-alt"></span></a></li>
-        <li ><a routerLink="/customerinfo" routerLinkActive="active-link">Customer Info <span style="color:red" class="glyphicon glyphicon-pencil"></span></a></li>   
+        <li ><a routerLink="/home" routerLinkActive="active-link"><span>Customer Details </span><span style="color:red" class="glyphicon glyphicon-list-alt"></span></a></li>
+        <li ><a routerLink="/customerinfo" routerLinkActive="active-link"><span>Customer Info </span><span style="color:red" class="glyphicon glyphicon-pencil"></span></a></li>   
         <li ><a >Add Customer <span style="color:red" class="glyphicon glyphicon-plus-sign"></span></a></li>          
       </ul>
         

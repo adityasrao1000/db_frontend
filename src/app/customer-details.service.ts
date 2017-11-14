@@ -8,8 +8,13 @@ export class CustomerDetailsService {
   
   search() {
 
-    return this.http.get(`${host}/UserDetails`)
-      .map(response => response.json());
+    const headers = new Headers();
+    const body = '';
+    return this.http
+      .post(`${host}/UserDetails`, body)
+      .toPromise()
+      .then(res => res.json())
+      .catch(err => alert('error'));
   }
 
 }

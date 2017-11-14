@@ -17,6 +17,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { CustomerInfoModule } from './customer-info/customer-info.module';
 import { SharedModule } from './shared.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,

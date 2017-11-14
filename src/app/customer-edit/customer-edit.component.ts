@@ -1,6 +1,7 @@
 import { Component,  Input} from '@angular/core';
 import { CustomerUpdateService } from '../customer-update.service';
 import { HomeComponent } from '../home.component';
+
 @Component({
   selector: 'app-customer-edit',
   templateUrl: './customer-edit.component.html',
@@ -8,7 +9,6 @@ import { HomeComponent } from '../home.component';
 })
   
 export class CustomerEditComponent {
-
 
   @Input() id: string = '';
   @Input() first: string = '';
